@@ -172,7 +172,7 @@ WLAN_OPEN_SOURCE := 1
 		CONFIG_LINUX_QCMBR :=y
 	endif
 
-	CONFIG_MPC_UT_FRAMEWORK := y
+	CONFIG_MPC_UT_FRAMEWORK := n
 
 	#Flag to enable offload packets feature
 	CONFIG_WLAN_OFFLOAD_PACKETS := y
