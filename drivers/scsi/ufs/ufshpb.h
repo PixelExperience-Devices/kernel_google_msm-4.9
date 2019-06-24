@@ -390,16 +390,6 @@ struct ufshpb_sysfs_entry {
 	ssize_t (*store)(struct ufshpb_lu *hpb, const char *, size_t);
 };
 
-static inline void *kvzalloc(size_t size, gfp_t flags)
-{
-	void *ret;
-
-	ret = kzalloc(size, flags | __GFP_NOWARN);
-	if (!ret)
-		ret = __vmalloc(size, flags | __GFP_ZERO, PAGE_KERNEL);
-	return ret;
-}
-
 struct ufshcd_lrb;
 
 void ufshcd_init_hpb(struct ufs_hba *hba);
